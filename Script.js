@@ -1,9 +1,6 @@
-// Año automático en el pie de página
-document.getElementById("year").textContent = new Date().getFullYear();
-
-// Validación simple del formulario de contacto
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  alert("Gracias por contactarnos. Te responderemos pronto ☕");
-  this.reset();
+document.addEventListener("DOMContentLoaded", () => {
+  const btnMenu = document.getElementById("btn-menu");
+  btnMenu.addEventListener("click", () => {
+    document.getElementById("menu").scrollIntoView({ behavior: "smooth" });
+  });
 });
