@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cafetería Brisa - Coffee & Co.</title>
   <meta name="description" content="Cafetería Brisa: café de especialidad, ambiente acogedor y desayunos artesanales.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
@@ -10,28 +10,11 @@
 </head>
 
 <body>
+  <!-- ========== ENCABEZADO ========== -->
   <header class="site-header">
     <div class="container header-grid">
       <a class="brand" href="#">
-        <!-- Logo vectorial propio -->
-        <svg class="logo" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" aria-labelledby="logoTitle logoDesc" role="img">
-          <title id="logoTitle">Logo Cafetería Brisa</title>
-          <desc id="logoDesc">Taza estilizada con una hoja</desc>
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1">
-              <stop offset="0%" stop-color="#6B4F4F" />
-              <stop offset="100%" stop-color="#E0A878" />
-            </linearGradient>
-          </defs>
-          <g transform="translate(10,10)">
-            <path d="M30 10 h60 a10 10 0 0 1 10 10 v10 a25 25 0 0 1 -25 25 h-40 a25 25 0 0 1 -25 -25 v-10 a10 10 0 0 1 10 -10 z" fill="url(#g1)" />
-            <path d="M95 30 a8 8 0 0 0 8 -8 v-2" stroke="#6B4F4F" stroke-width="3" fill="none" stroke-linecap="round"/>
-            <path d="M45 5 q10 -8 20 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.9"/>
-            <circle cx="140" cy="30" r="18" fill="#F8F4F1" stroke="#E0A878" stroke-width="2" />
-            <text x="10" y="70" font-family="Inter, sans-serif" font-weight="700" font-size="16" fill="#3b2a2a">Brisa</text>
-            <text x="70" y="70" font-family="Merriweather, serif" font-size="11" fill="#6B4F4F">Coffee & Co.</text>
-          </g>
-        </svg>
+        <img src="logo-brisa.png" alt="Logo Cafetería Brisa" class="logo">
       </a>
 
       <nav class="main-nav">
@@ -49,31 +32,26 @@
     </div>
   </header>
 
+  <!-- ========== CONTENIDO PRINCIPAL ========== -->
   <main>
+    <!-- HERO -->
     <section class="hero" id="inicio">
       <div class="container hero-grid">
         <div class="hero-text">
           <h1>Despierta tus sentidos</h1>
-          <p class="lead">Café de especialidad — orígenes seleccionados y un ambiente para disfrutar.</p>
+          <p class="lead">Café de especialidad — orígenes seleccionados, técnicas precisas y un ambiente acogedor.</p>
           <div class="hero-actions">
             <a class="btn-primary" href="#menu">Ver Menú</a>
             <a class="btn-secondary" href="#ubicacion">Cómo llegar</a>
           </div>
         </div>
-        <div class="hero-image" aria-hidden="true">
-          <div class="cup-illustration">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-              <g transform="translate(20,10)">
-                <ellipse cx="80" cy="150" rx="60" ry="14" opacity="0.08"/>
-                <path d="M30 40 h90 v40 a35 35 0 0 1 -35 35 h-20 a35 35 0 0 1 -35 -35 z" fill="#fff" stroke="#D6B89A" stroke-width="4"/>
-                <path d="M80 25 q15 10 0 22" stroke="#E0A878" stroke-width="4" stroke-linecap="round" fill="none"/>
-              </g>
-            </svg>
-          </div>
+        <div class="hero-image">
+          <img src="taza-cafe.png" alt="Taza de café" class="cup-illustration">
         </div>
       </div>
     </section>
 
+    <!-- MENÚ -->
     <section class="menu-preview" id="menu">
       <div class="container">
         <h2>Favoritos</h2>
@@ -84,11 +62,13 @@
             <p>Shot doble con notas a chocolate y frutos rojos.</p>
             <div class="price">$2.50</div>
           </article>
+
           <article class="card">
             <h3>Latte de Avellana</h3>
             <p>Leche vaporizada con sirope casero y arte latte.</p>
             <div class="price">$3.80</div>
           </article>
+
           <article class="card">
             <h3>Cold Brew Citrus</h3>
             <p>Infusión en frío con un toque cítrico — refrescante.</p>
@@ -98,6 +78,7 @@
       </div>
     </section>
 
+    <!-- NOSOTROS -->
     <section class="about" id="about">
       <div class="container about-grid">
         <div>
@@ -109,20 +90,24 @@
             <li>Opciones veganas y sin gluten</li>
           </ul>
         </div>
-        <div class="about-image" aria-hidden="true">
-          <div class="photo-placeholder">Foto / Promo</div>
+        <div class="about-image">
+          <img src="interior-cafeteria.jpg" alt="Interior de Cafetería Brisa">
         </div>
       </div>
     </section>
 
+    <!-- UBICACIÓN -->
     <section class="location" id="ubicacion">
       <div class="container">
         <h2>Visítanos</h2>
         <p class="sub">Calle Falsa 123 — Centro. Abierto lun-sáb 7:00–20:00</p>
-        <div class="map-embed">Mapa (iframe o imagen aquí)</div>
+        <div class="map-embed">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="220" style="border:0;" allowfullscreen loading="lazy"></iframe>
+        </div>
       </div>
     </section>
 
+    <!-- CONTACTO -->
     <section class="contact" id="contacto">
       <div class="container contact-grid">
         <div>
@@ -140,6 +125,7 @@
             <button class="btn-primary" type="submit">Enviar</button>
           </form>
         </div>
+
         <aside>
           <h3>Suscríbete</h3>
           <form id="subscribeForm" class="subscribe">
@@ -147,13 +133,16 @@
             <button type="submit" class="btn-secondary">Suscribir</button>
           </form>
           <div class="socials">
-            <a href="#">IG</a><a href="#">FB</a><a href="#">WA</a>
+            <a href="#">IG</a>
+            <a href="#">FB</a>
+            <a href="#">WA</a>
           </div>
         </aside>
       </div>
     </section>
   </main>
 
+  <!-- ========== PIE DE PÁGINA ========== -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>&copy; <span id="year"></span> Cafetería Brisa</div>
