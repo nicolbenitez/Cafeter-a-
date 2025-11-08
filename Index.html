@@ -3,154 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cafetería Brisa - Coffee & Co.</title>
-  <meta name="description" content="Cafetería Brisa: café de especialidad, ambiente acogedor y desayunos artesanales.">
-  
+  <title>Cafetería Brisa</title>
+  <meta name="description" content="Cafetería Brisa: café de especialidad y pastelería artesanal.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- ========== ENCABEZADO ========== -->
-  <header class="site-header">
-    <div class="container header-grid">
-      <a class="brand" href="#">
-        <img src="logo-brisa.png" alt="Logo Cafetería Brisa" class="logo">
-      </a>
-
-      <nav class="main-nav">
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <img src="logo-brisa.png" alt="Logo Cafetería Brisa" class="logo">
+      <nav class="nav">
         <ul>
+          <li><a href="#inicio">Inicio</a></li>
           <li><a href="#menu">Menú</a></li>
-          <li><a href="#about">Nosotros</a></li>
-          <li><a href="#ubicacion">Ubicación</a></li>
-          <li><a href="#contacto" class="cta">Reservar</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
-
-      <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
 
-  <!-- ========== CONTENIDO PRINCIPAL ========== -->
-  <main>
-    <!-- HERO -->
-    <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <h1>Despierta tus sentidos</h1>
-          <p class="lead">Café de especialidad — orígenes seleccionados, técnicas precisas y un ambiente acogedor.</p>
-          <div class="hero-actions">
-            <a class="btn-primary" href="#menu">Ver Menú</a>
-            <a class="btn-secondary" href="#ubicacion">Cómo llegar</a>
-          </div>
-        </div>
-        <div class="hero-image">
-          <img src="taza-cafe.png" alt="Taza de café" class="cup-illustration">
-        </div>
-      </div>
-    </section>
-
-    <!-- MENÚ -->
-    <section class="menu-preview" id="menu">
-      <div class="container">
-        <h2>Favoritos</h2>
-        <p class="sub">Cada bebida preparada con cuidado — opciones veganas y pastelería fresca.</p>
-        <div class="cards">
-          <article class="card">
-            <h3>Espresso Brisa</h3>
-            <p>Shot doble con notas a chocolate y frutos rojos.</p>
-            <div class="price">$2.50</div>
-          </article>
-
-          <article class="card">
-            <h3>Latte de Avellana</h3>
-            <p>Leche vaporizada con sirope casero y arte latte.</p>
-            <div class="price">$3.80</div>
-          </article>
-
-          <article class="card">
-            <h3>Cold Brew Citrus</h3>
-            <p>Infusión en frío con un toque cítrico — refrescante.</p>
-            <div class="price">$4.20</div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- NOSOTROS -->
-    <section class="about" id="about">
-      <div class="container about-grid">
-        <div>
-          <h2>Nuestra historia</h2>
-          <p>En Brisa creemos en el café como experiencia: del productor a tu taza. Practicamos comercio directo y sostenibilidad.</p>
-          <ul class="features">
-            <li>Origen único y trazabilidad</li>
-            <li>Baristas certificados</li>
-            <li>Opciones veganas y sin gluten</li>
-          </ul>
-        </div>
-        <div class="about-image">
-          <img src="interior-cafeteria.jpg" alt="Interior de Cafetería Brisa">
-        </div>
-      </div>
-    </section>
-
-    <!-- UBICACIÓN -->
-    <section class="location" id="ubicacion">
-      <div class="container">
-        <h2>Visítanos</h2>
-        <p class="sub">Calle Falsa 123 — Centro. Abierto lun-sáb 7:00–20:00</p>
-        <div class="map-embed">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="220" style="border:0;" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section class="contact" id="contacto">
-      <div class="container contact-grid">
-        <div>
-          <h2>Contacto y reservas</h2>
-          <form id="contactForm" class="form">
-            <label for="name">Nombre</label>
-            <input id="name" name="name" required>
-
-            <label for="email">Correo</label>
-            <input id="email" name="email" type="email" required>
-
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-            <button class="btn-primary" type="submit">Enviar</button>
-          </form>
-        </div>
-
-        <aside>
-          <h3>Suscríbete</h3>
-          <form id="subscribeForm" class="subscribe">
-            <input id="subEmail" name="subEmail" type="email" placeholder="tu@correo.com" required>
-            <button type="submit" class="btn-secondary">Suscribir</button>
-          </form>
-          <div class="socials">
-            <a href="#">IG</a>
-            <a href="#">FB</a>
-            <a href="#">WA</a>
-          </div>
-        </aside>
-      </div>
-    </section>
-  </main>
-
-  <!-- ========== PIE DE PÁGINA ========== -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>&copy; <span id="year"></span> Cafetería Brisa</div>
-      <nav>
-        <a href="#">Términos</a>
-        <a href="#">Privacidad</a>
-      </nav>
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>El aroma que inspira tu día ☕</h1>
+      <p>Disfruta de un café auténtico en un ambiente acogedor y moderno.</p>
+      <a href="#menu" class="btn">Ver menú</a>
     </div>
+  </section>
+
+  <!-- Menú -->
+  <section id="menu" class="menu">
+    <h2>Nuestros Favoritos</h2>
+    <div class="menu-items">
+      <div class="item">
+        <h3>Capuccino</h3>
+        <p>Espuma cremosa con un toque de canela.</p>
+        <span>$3.50</span>
+      </div>
+      <div class="item">
+        <h3>Latte de Vainilla</h3>
+        <p>Suave, aromático y perfectamente equilibrado.</p>
+        <span>$3.80</span>
+      </div>
+      <div class="item">
+        <h3>Cold Brew</h3>
+        <p>Refrescante y con sabor intenso.</p>
+        <span>$4.00</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nosotros -->
+  <section id="nosotros" class="nosotros">
+    <div class="container">
+      <div class="text">
+        <h2>Nuestra Historia</h2>
+        <p>
+          En Cafetería Brisa creemos que un buen café une a las personas. 
+          Trabajamos con granos seleccionados y tostados localmente para ofrecerte 
+          una experiencia única en cada taza.
+        </p>
+      </div>
+      <img src="interior-cafeteria.jpg" alt="Interior de la cafetería">
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contacto">
+    <h2>Contáctanos</h2>
+    <form id="contactForm">
+      <input type="text" id="nombre" placeholder="Tu nombre" required>
+      <input type="email" id="email" placeholder="Tu correo" required>
+      <textarea id="mensaje" rows="4" placeholder="Tu mensaje" required></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Cafetería Brisa. Todos los derechos reservados.</p>
   </footer>
 
   <script src="script.js"></script>
