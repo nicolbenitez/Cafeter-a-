@@ -58,6 +58,7 @@ nav a:hover {
   font-weight: bold;
 }
 
+/* Hero */
 .hero {
   text-align: center;
   padding: 80px 20px;
@@ -76,6 +77,7 @@ nav a:hover {
   color: #fff;
 }
 
+/* Menu */
 .menu-section {
   padding: 60px 20px;
   background-color: #4c372c;
@@ -85,13 +87,11 @@ nav a:hover {
   margin-bottom: 40px;
   color: #f4e2b8;
 }
-
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
-
 .product {
   background: #5c3b2a;
   border-radius: 12px;
@@ -140,24 +140,54 @@ nav a:hover {
   background: #a06b43;
 }
 
-/* SOBRE NOSOTROS */
-.about-section {
+/* Contacto */
+.contact-section {
   padding: 60px 20px;
   background-color: #3e2d23;
   text-align: center;
 }
-.about-section h2 {
+.contact-section h2 {
   color: #f4e2b8;
 }
-.about-section p {
-  max-width: 700px;
+.contact-section p {
+  margin-bottom: 20px;
+  color: #fff;
+}
+#contactForm {
+  max-width: 500px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#contactForm input,
+#contactForm textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #5c3b2a;
+  color: #fff;
+}
+#contactForm button {
+  margin-top: 10px;
+  background: #a06b43;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+}
+.whatsapp {
+  margin-top: 15px;
+}
+.whatsapp a {
+  color: #25D366;
+  text-decoration: none;
   font-size: 1.1em;
-  line-height: 1.6;
-  color: #f9f4ef;
 }
 
-/* FOOTER */
+/* Footer */
 footer {
   background: #2c1f18;
   text-align: center;
@@ -165,7 +195,7 @@ footer {
   color: #f4e2b8;
 }
 
-/* CARRITO */
+/* Carrito */
 #cartPanel {
   position: fixed;
   right: -400px;
@@ -207,9 +237,6 @@ footer {
   padding: 8px;
   border-radius: 8px;
 }
-.cart-footer {
-  margin-top: auto;
-}
 .btn {
   display: block;
   width: 100%;
@@ -222,7 +249,4 @@ footer {
 .btn.primary {
   background: #a06b43;
   color: #fff;
-}
-.btn:hover {
-  opacity: 0.9;
 }
