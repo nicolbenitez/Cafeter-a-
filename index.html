@@ -15,29 +15,33 @@
     <nav>
       <a href="#inicio">Inicio</a>
       <a href="#menu">Menú</a>
-      <a href="#nosotros">Sobre Nosotros</a>
+      <a href="#contacto">Contacto</a>
       <button id="cartBtn">🛒 <span id="cartCount">0</span></button>
     </nav>
   </header>
 
   <main id="inicio" class="hero">
-    <h2>Bienvenido a Aromas del Bosque ☕</h2>
-    <p>Donde cada taza cuenta una historia de sabor y tradición colombiana.</p>
+    <h2>El aroma que despierta tus sentidos ☕</h2>
+    <p>Disfruta del mejor café artesanal, cultivado con amor en las montañas de Colombia.</p>
   </main>
 
   <section id="menu" class="menu-section">
-    <h2>Menú</h2>
+    <h2>Menú Destacado</h2>
     <div id="productList" class="product-grid"></div>
   </section>
 
-  <section id="nosotros" class="about-section">
-    <h2>Sobre Nosotros</h2>
-    <p>
-      En <strong>Aromas del Bosque</strong>, creemos que el café es más que una bebida: 
-      es una experiencia que conecta corazones. Cada grano proviene de fincas locales 
-      donde se cultiva con amor, sostenibilidad y respeto por la tierra.
-      Nuestro compromiso es ofrecerte una taza que despierte tus sentidos y te haga sentir en casa.
-    </p>
+  <section id="contacto" class="contact-section">
+    <h2>Contáctanos</h2>
+    <p>¿Quieres hacer un pedido o reservar una mesa? ¡Estamos aquí para ti!</p>
+    <form id="contactForm">
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu correo" required>
+      <textarea placeholder="Tu mensaje" rows="4" required></textarea>
+      <button type="submit" class="btn primary">Enviar mensaje</button>
+    </form>
+    <div class="whatsapp">
+      <a href="https://wa.me/573001112233" target="_blank">💬 Escríbenos por WhatsApp</a>
+    </div>
   </section>
 
   <footer>
