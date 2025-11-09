@@ -1,37 +1,126 @@
-(function() {
-  const menuToggle = document.getElementById('menuToggle');
-  const mainNav = document.getElementById('mainNav');
-  const yearEl = document.getElementById('year');
-  const contactForm = document.getElementById('contactForm');
-  const clearForm = document.getElementById('clearForm');
-  const orderBtns = document.querySelectorAll('.order-btn');
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tienda — Cafetería La Estación</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <!-- Logo SVG cálido / natural -->
+        <svg width="52" height="52" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="64" height="64" rx="12" fill="#3a2b23"/>
+          <g transform="translate(9 9)" fill="none" stroke="#F6EDE2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 36c6-6 22-6 28 0" />
+            <rect x="6" y="6" width="36" height="22" rx="4" />
+            <path d="M28 4c0 6-4 8-8 8" />
+          </g>
+        </svg>
+        <div class="brand-text">
+          <div class="name">La Estación</div>
+          <div class="tag">Café & Tienda</div>
+        </div>
+      </a>
 
-  menuToggle.addEventListener('click', function() {
-    const expanded = mainNav.style.display === 'flex';
-    mainNav.style.display = expanded ? '' : 'flex';
-    mainNav.style.flexDirection = 'column';
-  });
+      <nav class="nav" id="mainNav">
+        <a href="#productos">Productos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
 
-  yearEl.textContent = new Date().getFullYear();
+      <div class="header-actions">
+        <button id="cartBtn" class="cart-btn" aria-label="Abrir carrito">🧺 <span id="cartCount">0</span></button>
+        <button id="menuToggle" class="menu-toggle" aria-label="Abrir menú">☰</button>
+      </div>
+    </div>
+  </header>
 
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const data = new FormData(contactForm);
-    const name = data.get('name');
-    alert(`Gracias, ${name}! Tu mensaje fue enviado correctamente.`);
-    contactForm.reset();
-  });
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Tu café favorito, directo a tu puerta</h1>
+          <p>Granos seleccionados, tostado artesanal y productos que abrazan el sabor tradicional.</p>
+          <a class="btn primary" href="#productos">Ver productos</a>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <div class="image-placeholder">Foto de café</div>
+        </div>
+      </div>
+    </section>
 
-  clearForm.addEventListener('click', function() {
-    contactForm.reset();
-  });
+    <section id="productos" class="productos section">
+      <div class="container">
+        <h2>Productos</h2>
+        <p class="section-sub">Cafés, bebidas listas y combos para llevar.</p>
 
-  orderBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      const item = btn.dataset.item || 'Producto';
-      const precio = btn.parentElement.querySelector('.price')?.textContent || '';
-      const confirmOrder = confirm(`¿Añadir ${item} (${precio}) al pedido?`);
-      if (confirmOrder) alert(`${item} añadido al pedido.`);
-    });
-  });
-})();
+        <div id="productList" class="product-grid">
+          <!-- Productos cargados por JS -->
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="section about">
+      <div class="container">
+        <h2>Sobre La Estación</h2>
+        <p>Somos una cafetería que busca revivir el ritual del café: aroma, conversación y calma. Compra nuestros paquetes de origen y disfruta en casa.</p>
+      </div>
+    </section>
+
+    <section id="contacto" class="section contact">
+      <div class="container">
+        <h2>Contacto</h2>
+        <p>Dirección: Calle Falsa 123 · Tel: +57 300 000 0000</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Carrito lateral -->
+  <aside id="cartPanel" class="cart-panel" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Tu carrito</h3>
+      <button id="closeCart" aria-label="Cerrar carrito">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items">
+      <!-- Items por JS -->
+    </div>
+    <div class="cart-footer">
+      <div class="totals">
+        <div>Subtotal: <strong id="subtotal">0</strong></div>
+        <div>Envío: <strong id="shipping">0</strong></div>
+        <div>Total: <strong id="total">0</strong></div>
+      </div>
+      <div class="cart-actions">
+        <button id="clearCart" class="btn ghost">Vaciar carrito</button>
+        <button id="checkoutBtn" class="btn primary">Pagar</button>
+      </div>
+    </div>
+  </aside>
+
+  <div id="overlay" class="overlay" hidden></div>
+
+  <template id="productTpl">
+    <article class="product-card">
+      <div class="media">IMG</div>
+      <div class="content">
+        <h3 class="product-title"></h3>
+        <p class="product-desc"></p>
+        <div class="product-meta">
+          <span class="price"></span>
+          <div class="actions">
+            <input type="number" class="qty" min="1" value="1" />
+            <button class="btn small add-to-cart">Añadir</button>
+          </div>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
