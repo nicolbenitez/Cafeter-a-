@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tienda — Cafetería La Estación</title>
+  <title>Cafetería La Estación</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -12,7 +12,6 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#">
-        <!-- Logo SVG -->
         <svg width="52" height="52" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect width="64" height="64" rx="12" fill="#3a2b23"/>
           <g transform="translate(9 9)" fill="none" stroke="#F6EDE2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
@@ -29,6 +28,7 @@
 
       <nav class="nav" id="mainNav">
         <a href="#productos">Productos</a>
+        <a href="#galeria">Galería</a>
         <a href="#nosotros">Nosotros</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -49,7 +49,7 @@
           <a class="btn primary" href="#productos">Ver productos</a>
         </div>
         <div class="hero-image">
-          <img src="images/fondo-cafe.jpg" alt="Café artesanal" />
+          <img src="images/cafe-hero.jpg" alt="Café artesanal" />
         </div>
       </div>
     </section>
@@ -58,8 +58,19 @@
       <div class="container">
         <h2>Productos</h2>
         <p class="section-sub">Cafés, bebidas listas y combos para llevar.</p>
-        <div id="productList" class="product-grid">
-          <!-- Productos por JS -->
+        <div id="productList" class="product-grid"></div>
+      </div>
+    </section>
+
+    <!-- Nueva Sección Galería -->
+    <section id="galeria" class="section galeria">
+      <div class="container">
+        <h2>Galería</h2>
+        <p class="section-sub">Un vistazo a nuestra pasión por el café.</p>
+        <div class="galeria-grid">
+          <img src="images/galeria1.jpg" alt="Taza de café" />
+          <img src="images/galeria2.jpg" alt="Granos de café" />
+          <img src="images/galeria3.jpg" alt="Interior de la cafetería" />
         </div>
       </div>
     </section>
@@ -74,12 +85,12 @@
     <section id="contacto" class="section contact">
       <div class="container">
         <h2>Contacto</h2>
-        <p>Dirección: Calle Falsa 123 · Tel: +57 300 000 0000</p>
+        <p>Teléfono: +57 300 000 0000</p>
+        <p>Correo: contacto@laestacioncafe.com</p>
       </div>
     </section>
   </main>
 
-  <!-- Carrito -->
   <aside id="cartPanel" class="cart-panel">
     <div class="cart-header">
       <h3>Tu carrito</h3>
