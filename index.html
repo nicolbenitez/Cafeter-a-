@@ -1,130 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cafetería La Estación</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Aromas del Bosque</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#">
-        <svg width="52" height="52" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="64" height="64" rx="12" fill="#3a2b23"/>
-          <g transform="translate(9 9)" fill="none" stroke="#F6EDE2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M10 36c6-6 22-6 28 0" />
-            <rect x="6" y="6" width="36" height="22" rx="4" />
-            <path d="M28 4c0 6-4 8-8 8" />
-          </g>
-        </svg>
-        <div class="brand-text">
-          <div class="name">La Estación</div>
-          <div class="tag">Café & Tienda</div>
-        </div>
-      </a>
-
-      <nav class="nav" id="mainNav">
-        <a href="#productos">Productos</a>
-        <a href="#galeria">Galería</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-
-      <div class="header-actions">
-        <button id="cartBtn" class="cart-btn">🧺 <span id="cartCount">0</span></button>
-        <button id="menuToggle" class="menu-toggle">☰</button>
-      </div>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo Café Aromas del Bosque">
+      <h1>Aromas del Bosque</h1>
     </div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#menu">Menú</a>
+      <a href="#nosotros">Sobre Nosotros</a>
+      <button id="cartBtn">🛒 <span id="cartCount">0</span></button>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <h1>Tu café favorito, directo a tu puerta</h1>
-          <p>Granos seleccionados, tostado artesanal y productos que abrazan el sabor tradicional.</p>
-          <a class="btn primary" href="#productos">Ver productos</a>
-        </div>
-        <div class="hero-image">
-          <img src="images/cafe-hero.jpg" alt="Café artesanal" />
-        </div>
-      </div>
-    </section>
-
-    <section id="productos" class="productos section">
-      <div class="container">
-        <h2>Productos</h2>
-        <p class="section-sub">Cafés, bebidas listas y combos para llevar.</p>
-        <div id="productList" class="product-grid"></div>
-      </div>
-    </section>
-
-    <!-- Nueva Sección Galería -->
-    <section id="galeria" class="section galeria">
-      <div class="container">
-        <h2>Galería</h2>
-        <p class="section-sub">Un vistazo a nuestra pasión por el café.</p>
-        <div class="galeria-grid">
-          <img src="images/galeria1.jpg" alt="Taza de café" />
-          <img src="images/galeria2.jpg" alt="Granos de café" />
-          <img src="images/galeria3.jpg" alt="Interior de la cafetería" />
-        </div>
-      </div>
-    </section>
-
-    <section id="nosotros" class="section about">
-      <div class="container">
-        <h2>Sobre La Estación</h2>
-        <p>Somos una cafetería que busca revivir el ritual del café: aroma, conversación y calma. Compra nuestros paquetes de origen y disfruta en casa.</p>
-      </div>
-    </section>
-
-    <section id="contacto" class="section contact">
-      <div class="container">
-        <h2>Contacto</h2>
-        <p>Teléfono: +57 300 000 0000</p>
-        <p>Correo: contacto@laestacioncafe.com</p>
-      </div>
-    </section>
+  <main id="inicio" class="hero">
+    <h2>Bienvenido a Aromas del Bosque ☕</h2>
+    <p>Donde cada taza cuenta una historia de sabor y tradición colombiana.</p>
   </main>
 
-  <aside id="cartPanel" class="cart-panel">
+  <section id="menu" class="menu-section">
+    <h2>Menú</h2>
+    <div id="productList" class="product-grid"></div>
+  </section>
+
+  <section id="nosotros" class="about-section">
+    <h2>Sobre Nosotros</h2>
+    <p>
+      En <strong>Aromas del Bosque</strong>, creemos que el café es más que una bebida: 
+      es una experiencia que conecta corazones. Cada grano proviene de fincas locales 
+      donde se cultiva con amor, sostenibilidad y respeto por la tierra.
+      Nuestro compromiso es ofrecerte una taza que despierte tus sentidos y te haga sentir en casa.
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Aromas del Bosque · Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Panel del carrito -->
+  <aside id="cartPanel">
     <div class="cart-header">
-      <h3>Tu carrito</h3>
+      <h3>Tu pedido ☕</h3>
       <button id="closeCart">✕</button>
     </div>
-    <div id="cartItems" class="cart-items"></div>
+    <div id="cartItems"></div>
     <div class="cart-footer">
-      <div class="totals">
-        <div>Subtotal: <strong id="subtotal">0</strong></div>
-        <div>Envío: <strong id="shipping">0</strong></div>
-        <div>Total: <strong id="total">0</strong></div>
+      <div class="cart-summary">
+        <p>Subtotal: <span id="subtotal">$0</span></p>
+        <p>Envío: <span id="shipping">Gratis</span></p>
+        <p><strong>Total: <span id="total">$0</span></strong></p>
       </div>
-      <div class="cart-actions">
-        <button id="clearCart" class="btn ghost">Vaciar</button>
-        <button id="checkoutBtn" class="btn primary">Pagar</button>
-      </div>
+      <button id="clearCart" class="btn">Vaciar carrito</button>
+      <button id="checkoutBtn" class="btn primary">Finalizar compra</button>
     </div>
   </aside>
-
-  <div id="overlay" class="overlay" hidden></div>
+  <div id="overlay" hidden></div>
 
   <template id="productTpl">
-    <article class="product-card">
+    <article class="product">
       <div class="media"></div>
-      <div class="content">
-        <h3 class="product-title"></h3>
-        <p class="product-desc"></p>
-        <div class="product-meta">
-          <span class="price"></span>
-          <div class="actions">
-            <input type="number" class="qty" min="1" value="1" />
-            <button class="btn small add-to-cart">Añadir</button>
-          </div>
-        </div>
+      <h3 class="product-title"></h3>
+      <p class="product-desc"></p>
+      <p class="price"></p>
+      <div class="actions">
+        <input type="number" min="1" value="1" class="qty">
+        <button class="add-to-cart">Añadir</button>
       </div>
     </article>
   </template>
